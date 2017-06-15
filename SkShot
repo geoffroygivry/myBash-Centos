@@ -1,0 +1,12 @@
+#!bin/csh
+
+set sear = $argv[1]
+clear
+showenv tao
+eval `shotcmds !*` && touchdir $sear
+echo -ne "\033]2;SK ${sear}\007"
+c
+ls -trh nuke
+echo "======"
+echo shot: $sear
+echo "======"

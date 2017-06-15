@@ -1,0 +1,9 @@
+#####################################
+
+#how to free up memory RAM
+sudo su
+sync
+echo 3 > /proc/sys/vm/drop_caches
+su pi
+
+#####################################

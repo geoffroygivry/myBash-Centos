@@ -1,0 +1,16 @@
+#!bin/bash
+
+
+sear=$1
+
+clear
+
+echo "======"
+
+echo Find $sear
+
+echo "======"
+
+grep -rnw .  --color --exclude=*.{pyc,~} -e $sear
+
+echo "======"

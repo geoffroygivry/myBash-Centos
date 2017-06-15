@@ -1,0 +1,64 @@
+ ok this is what I've done for new apps : 
+ _ create your new app on CA (Codeanywhere) : rails new <nameOfYourApp>
+ - on github : create new repo with the name of your app without ticking the readme  and licence box
+ - back to codeanywhere, cd to project
+ - git config --list (shouldn't be in your app for now)
+ - if it is a new container you must type : 
+      - git config --global user.name "Geoffroy Givry"
+      - git config --global user.email "geoff.givry@gmail.com"
+ - git init
+ - git add -A
+ - git status
+ - git commit -m "initial commit"
+ - git remote add origin git@github.com:geoffroygivry/finance-trck.git (finance-trck was used for the example)
+ - git remote -v # to see the origin
+ - git push -u origin master (only the very first time)
+ and you're done!
+ 
+ 
+ -----------------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ To set root route to pages controller home:
+Navigate to config/routes.rb file and enter in the following code ->
+root 'pages#home'
+The reference to the root path within the application code would be root_path
+Git references:
+git-scm.com
+git-scm.com/book/en/v2
+gitref.org
+First time (required only once to configure git for your environment):
+git config --global user.name "Your name" ## in the case "Your name" => "Geoffroy Givry"
+git config --global user.email "Your email" ## in the case "Your email" => geoff.givry@gmail.com
+replace Your name and Your email above with your actual name and email address which you want shown on repo
+To display git config settings:
+git config --list
+Some useful git commands:
+To initialize a git repository for your application (do this from within the application directory) ->
+git init
+To add/track all files ->
+git add -A
+To commit changes/updates/additions to repository ->
+git commit -m "A useful message to help remember details of commit"
+To check current state of file updates with already committed code in repo ->
+git status
+To reject latest changes ->
+git checkout -f
+Site to create free online code repositories:
+github.com
+bitbucket.org
+
+-----------------------------------------------------------------------------------------
+
+
+To display your public SSH key:
+cat ~/.ssh/id_rsa.pub
+When creating github repo for application ensure you click the SSH button then push existing repo:
+git remote add origin git@github.com:yourgithubaccountname/alpha-blog.git
+git push -u origin master # Remember you only need to use this command the first time
+To view remotes setup in your environment (from your app directory):
+git remote -v
+For future pushes to repository:
+git push
+To deploy app to production, we'll use heroku in this course, link to heroku:
+www.heroku.com

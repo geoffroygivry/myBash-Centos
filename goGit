@@ -1,0 +1,14 @@
+#!bin/bash
+
+GREEN=`tput setaf 2`
+reset=`tput sgr0`
+message=("$@")
+
+git add -A
+git status
+git commit -m "$message"
+git push
+
+echo "${GREEN}Your code has been pushed well!${reset}"
+
+# how to use it without alias : source goGit "I put my message here". with alias gogit "I put my message here".

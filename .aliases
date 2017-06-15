@@ -1,0 +1,153 @@
+
+##Setup the directory colours
+########################################
+setenv LS_COLORS 'no=00:fi=01;36:di=1;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=01;33:ow=01;33:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.nk=01;31:*.py=01;34:*.exr=01;90'
+
+
+
+
+# ls aliases
+
+alias ls ls -CF --si --color=tty
+alias ll ls -latr
+alias l 'ls -la \!* | $PAGER'
+alias lsd 'ls -1 \!* | grep \[/@\]$'
+
+# a  ls       'ls -p --color=tty'
+a  ll       'ls -al'
+a  lt       'ls -lt'
+a  ltr      'ls -ltr'
+a  new      'ls -lAt \!* | head -20'
+a  newm     'ls -lt \!* | more'
+
+# System Utilities
+a  mem      'echo "IPCS-VFBS";echo;echo;ipcs;ps -eo pid,user,size,cmd --sort size | tail -n 10;echo "\nFree Memory:\n"`free`'
+a  psa      "ps -eaf | fgrep -v root "
+a  psg      'psa | egrep \!*'
+a  sane     'xset m default ; xset r on ; stty intr ^C ; stty d26:1805:e0cbe:b3b:4b00:4b00:3:1c:8:15:4:0:0:1a:11:13:1a:19:12:f:17:16:0:0:0:0:0:0:0:1'
+
+# Other programs
+a jot       nedit
+a fixx      'xsetroot -cursor_name left_ptr -fg black -bg white'
+a xlock     'xscreensaver-command -lock'
+
+# Zeno Aliases
+a zenos     'zeno \!* |& showexecs'
+a ZENOS     'ZENO \!* |& showexecs'
+a zs        'zeno \!* |& showexecs'
+a ZS        'ZENO \!* |& showexecs'
+
+# Shows
+a se        showenv
+a show      printenv SHOW
+
+a ssh 'ssh -X -Y'
+
+# New aliases added in Training Dept; 11/2010 scontreras
+a rmlock	/dept/training/bin/rmlock
+a hpremote	/opt/hpremote/rgreceiver/rgreceiver.sh
+
+
+# EOF
+
+## ALIASES GGIVRY LINUX UBUNTU
+########################################
+alias c 'clear ; source ~/csh/greet2'
+alias src "source ~/.aliases"
+alias s "source ~/csh/nav"
+alias sd "source ~/csh/mvshots"
+alias k kview
+alias e exit
+alias g '/home/ggivry/.nuke/SublimeText3/sublime_text_3/sublime_text'
+alias np 's /tools/JCOM/nuke/6.2/python/'
+alias py 's /usr/home/ggivry/.nuke/Python/'
+alias ggp 's /user_data/Geoff/Python'
+alias qt '/apps/Linux64/qt/qt-4.7.3-gcc433/bin/designer'
+alias tt '~/ToDo2.py & exit'
+alias gt '~/GeoffTable.py & exit'
+alias lss ls -ltr
+alias km komodo
+alias gui 's /user_data/Geoff/PERSONAL/Python_Programming_and_pipeline_General/'
+alias start '~/geoffGui.py & exit'
+alias gn '~/geoffNote1.04.py'
+alias menu 'g ~/.nuke/menu.py & s .'
+alias nj 'source ~/csh/nukeLauncher'
+alias nk 'nuke nuke/'
+alias vray 'source ~/csh/vrayEnv'
+alias findIt 'source ~/csh/findIt'
+alias mkgif 'source ~/csh/makeGif'
+alias rm '/bin/rm'
+alias t 'tree -C'
+alias rv6 'rv --version 6.2.3'
+alias dd 'source ~/csh/rvBg_iuav'
+alias farm 'python /home/ncaillier/pythonScripts/obaqInterface/farmview.py &'
+alias tmp 's /tmp/Geoff/'
+alias tc 'source ~/csh/TC'
+alias vdi 'vmware-view &'
+alias ss 'source ~/csh/shot'
+alias sk 'source ~/csh/newSkShot'
+
+# alias 4750 "showenv party; eval 'shot td tfr4750'; echo '\033]2;tfr4750\007' "
+# alias 4390 "showenv party; eval 'shot td tfr4390'; echo '\033]2;tfr4390\007' "
+# alias 4740 "showenv party; eval 'shot td tfr4740'; echo '\033]2;tfr4740\007' "
+# alias 4760 "showenv party; eval 'shot td tfr4760'; echo '\033]2;tfr4760\007' "
+# alias 4770 "showenv party; eval 'shot td tfr4770'; echo '\033]2;tfr4770\007' "
+# alias 0000 "showenv party; eval 'shot td tfr0000'; echo '\033]2;tfr0000\007' "
+# alias 3540 "showenv party; eval 'shot td tfr3540'; echo '\033]2;tfr3540\007' "
+# alias 3040 "showenv party; eval 'shot td tfr3040'; echo '\033]2;tfr3040\007' "
+# alias 6270 "showenv party; eval 'shot td tfr6270'; echo '\033]2;tfr6270\007' "
+# alias 1580 "showenv party; eval 'shot td tmu1580'; echo '\033]2;tmu1580\007' "
+# alias 1720 "showenv party; eval 'shot td tmu1720'; echo '\033]2;tmu1720\007' "
+# alias 1000 "showenv party; eval 'shot td wdh1000_sg'; echo '\033]2;wdh1000\007' "
+# alias 1040 "showenv party; eval 'shot td wdh1040'; echo '\033]2;wdh1040\007' "
+# alias 3150 "showenv party; eval 'shot td tfr3150'; echo '\033]2;tfr3150\007' "
+# alias 1660 "showenv cfl; eval 'shot td dg1660'; echo '\033]2;dg1660\007' "
+# alias 1360 "showenv cfl; eval 'shot td dg1360'; echo '\033]2;dg1360\007' "
+# alias 1365 "showenv cfl; eval 'shot td dg1365'; echo '\033]2;dg1365\007' "
+# alias xxj0010 "showenv shedd; eval 'shot td xxj0010'; echo '\033]2;xxj0010\007' "
+# alias xxj0030 "showenv shedd; eval 'shot td xxj0030'; echo '\033]2;xxj0030\007' "
+# alias xxi0010 "showenv shedd; eval 'shot td xxi0010'; echo '\033]2;xxi0010\007' "
+# alias 1215 "showenv hit; eval 'shot td lf1215'; echo '\033]2;lf1215\007' "
+# alias 1245 "showenv hit; eval 'shot td lf1245'; echo '\033]2;lf1245\007' "
+# alias 1260 "showenv hit; eval 'shot td lf1260'; echo '\033]2;lf1260\007' "
+# alias 1280 "showenv hit; eval 'shot td lf1280'; echo '\033]2;lf1280\007' "
+# alias 1116 "showenv hit; eval 'shot td ap1116'; echo '\033]2;ap1116\007' "
+# alias 2070 "showenv hit; eval 'shot td ap2070'; echo '\033]2;ap2070\007' "
+# alias 0070 "showenv av; eval 'shot td dur0070'; echo '\033]2;dur0070\007' "
+# alias 0090 "showenv av; eval 'shot td dur0090'; echo '\033]2;dur0090\007' "
+# alias 0080 "showenv av; eval 'shot td dur0080'; echo '\033]2;dur0080\007' "
+# alias 0300 "showenv av; eval 'shot td dur0300'; echo '\033]2;dur0300\007' "
+# alias 0320 "showenv av; eval 'shot td dur0320'; echo '\033]2;dur0320\007' "
+
+alias 1710 "showenv tao; eval 'shot td faw1710'; echo '\033]2;faw1710\007' "
+alias 1524 "showenv tao; eval 'shot td fac1524'; echo '\033]2;fac1524\007' "
+alias 1032 "showenv tao; eval 'shot td faw1032';; echo '\033]2;faw1032\007' "
+alias 1036 "showenv tao; eval 'shot td faw1036';; echo '\033]2;faw1036\007' "
+alias 2120 "showenv tao; eval 'shot td fbb2120';; echo '\033]2;fbb2120\007' "
+alias 2130 "showenv tao; eval 'shot td fbb2130';; echo '\033]2;fbb2130\007' "
+alias 2380 "showenv tao; eval 'shot td fbt2380';; echo '\033]2;fbt2380\007' "
+alias 1150 "showenv tao; eval 'shot td lmc1150';; echo '\033]2;lmc1150\007' "
+alias 1370 "showenv tao; eval 'shot td fae1370';; echo '\033]2;fae1370\007' "
+alias 1300 "showenv tao; eval 'shot td fbb1300';; echo '\033]2;fbb1300\007' "
+alias 1570 "showenv tao; eval 'shot td fbb1570';; echo '\033]2;fbb1570\007' "
+alias 1590 "showenv tao; eval 'shot td fbb1590';; echo '\033]2;fbb1590\007' "
+alias 0900 "showenv tao; eval 'shot td fbb0900';; echo '\033]2;fbb0900\007' "
+alias 010 "showenv tweed; eval 'shot td tw010';; echo '\033]2;tw010\007' "
+alias 1780 "showenv tao; eval 'shot td faw1780';; echo '\033]2;faw1780\007' "
+alias 1030 "showenv tao; eval 'shot td bjk1030';; echo '\033]2;bjk1030\007' "
+
+
+alias mari "mari --version=2.6v1"
+alias dev "s ~/.nuke/sandbox/dev; echo '\033]2;/sandbox/dev\007' "
+alias rel "s ~/.nuke/sandbox/release; echo '\033]2;/sandbox/release\007' "
+
+alias nukedev "setenv DEV "devModeOn" ; nuke --eco-minimal"
+alias nkn "nuke --eco-minimal"
+
+alias gg 'shot ; s nuke ; u'
+alias sss 'submitLocal'
+alias aa 'g ~/.aliases &'
+alias mkaa 'python ~/csh/pyraw.py'
+alias cleanpyc 'find . -name "*.pyc" -exec rm -rf {} \;'
+alias cleanbkp 'find . -name "*~" -exec rm -rf {} \;'
+alias tab "source ~/csh/tab "

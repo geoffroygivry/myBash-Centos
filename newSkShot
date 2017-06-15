@@ -1,0 +1,15 @@
+#!bin/csh
+
+rm ~/test.txt
+set sshot = $argv[1]
+set sear = $argv[2]
+showenv tao
+shot $sshot
+echo "Please wait..."
+ffm $sear -t pts_frames --output > ~/test.txt
+set output = `awk 'NF>1{print $NF}' ~/test.txt`
+echo "======================"
+echo $output
+echo "======================"
+nuke -v $output
+echo "======================"

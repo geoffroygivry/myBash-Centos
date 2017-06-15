@@ -1,0 +1,7 @@
+#!bin/bash                                                                                                                                                          
+                                                                                                                                                                    
+al=$1                                                                                                                                                               
+command=("$2")                                                                                                                                                      
+                                                                                                                                                                    
+echo "alias $al='$command' " >> ~/.bashrc                                                                                                                           
+source ~/.bashrc  

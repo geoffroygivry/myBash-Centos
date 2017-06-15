@@ -1,0 +1,33 @@
+#!bin/bash
+
+echo "" >> ~/.bashrc
+echo "#Geoff aliases" >> ~/.bashrc
+echo "export LS_COLORS=\"di=1;34:*.py=35:*.pyc=90\"" >> ~/.bashrc
+echo "export PS1=\"\[$(tput bold)\]\[\033[38;5;167m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] @ \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;99m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] - [\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;215m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]]:\[$(tput sgr0)\]\"" >> ~/.bashrc
+echo "alias listservice='sudo service --status-all'" >> ~/.bashrc
+echo "alias c='clear ; source ~/mybash/welcome'" >> ~/.bashrc
+echo "alias s='source ~/mybash/nav'" >> ~/.bashrc
+echo "alias gogit='source ~/mybash/goGit'" >> ~/.bashrc
+echo "alias gitinit='source ~/mybash/gitFirstInit'" >> ~/.bashrc
+echo "alias findit='source ~/mybash/findIt'" >> ~/.bashrc
+echo "alias lss='lss -r'" >> ~/.bashrc
+echo "alias gitreset='source ~/mybash/gitreset'" >> ~/.bashrc
+echo "alias showchmod=\"stat --format '%a'\"" >> ~/.bashrc
+echo "alias src='source ~/.bashrc'" >> ~/.bashrc
+echo "alias pwdf='readlink -f'" >> ~/.bashrc
+echo "alias sve='source ./bin/activate'" >> ~/.bashrc
+echo "alias mb='s ~/mybash'" >> ~/.bashrc
+echo "alias aa='sudo nano ~/.bashrc'" >> ~/.bashrc
+echo "alias aadd='source ~/mybash/addAlias'" >> ~/.bashrc
+echo "alias u='cd ../'" >> ~/.bashrc
+echo "alias uu='cd ../..'" >> ~/.bashrc
+echo "alias uuu='cd ../../..'" >> ~/.bashrc
+echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
+echo "alias cls='clear'" >> ~/.bashrc
+
+
+source ~/.bashrc
+
+echo "update system..."
+sudo yum update
+echo "Hurray! your system is ready to rumble! :)"

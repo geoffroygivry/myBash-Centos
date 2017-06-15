@@ -1,0 +1,4 @@
+alias s='source ~/myBash/nav'
+alias gogit='source ~/myBash/goGit'
+alias aa='sudo nano ~/.bashrc'
+alias c='clear'
