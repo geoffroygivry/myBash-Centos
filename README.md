@@ -2,9 +2,5 @@
 
 ### Setup:
 ```
-mkdir ~/mybash/; git clone https://github.com/geoffroygivry/myBash.git ~/mybash/; source ~/mybash/setup
+mkdir ~/mybash/; git clone git@github.com:geoffroygivry/myBash-Centos.git ~/mybash/; source ~/mybash/setup
 ```
-
-
-
-# ReadMe
