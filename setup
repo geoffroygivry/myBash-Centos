@@ -24,10 +24,11 @@ echo "alias uu='cd ../..'" >> ~/.bashrc
 echo "alias uuu='cd ../../..'" >> ~/.bashrc
 echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
 echo "alias cls='clear'" >> ~/.bashrc
+echo "alias ll='ls -latrh'" >> ~/.bashrc
 
 
 source ~/.bashrc
 
-echo "update system..."
+echo "updating system..."
 sudo yum update
 echo "Hurray! your system is ready to rumble! :)"
